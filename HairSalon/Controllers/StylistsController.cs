@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +16,8 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
-      return View("Index");
+      List<Stylist> model = _db.Stylists.ToDoList();
+      return View("Index", model);
     }
 
     public ActionResult Create()
