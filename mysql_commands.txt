@@ -2,3 +2,16 @@ CREATE SCHEMA `christopher_huber` ;
 
 
 
+CREATE TABLE `christopher_huber`.`Stylists` (
+  `StylistId` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NOT NULL DEFAULT '\"',
+  PRIMARY KEY (`StylistId`));
+
+
+
+CREATE TABLE `christopher_huber`.`Clients` (
+  `ClientId` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NOT NULL,
+  `StylistId` INT NOT NULL,
+  PRIMARY KEY (`ClientId`));
+
