@@ -25,6 +25,7 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Client client)
     {
+      
       return RedirectToAction("Index", "Stylists");
     }
   }
