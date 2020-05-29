@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System;
 
 
 namespace HairSalon.Controllers
@@ -27,7 +26,8 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Client client)
     {
-      
+      _db.Clients.Add(client);
+      _db.SaveChanges();
       return RedirectToAction("Index", "Stylists");
     }
   }
