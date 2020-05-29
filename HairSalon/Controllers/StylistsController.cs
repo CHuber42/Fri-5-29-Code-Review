@@ -26,6 +26,9 @@ namespace HairSalon.Controllers
 
     [HttpPost] 
     public ActionResult Create(Stylist stylist)
+    {
+      
+    }
 
   }
 }
