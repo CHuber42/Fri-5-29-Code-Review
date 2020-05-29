@@ -1,6 +1,6 @@
 @using HairSalon.Models
 
-@foreach (Stylist stylist in model)
+@foreach (Stylist stylist in Model)
 {
   <p>@Html.ActionLink("@stylist.Name", "Details", new { id = stylist.StylistId})</p>
 }

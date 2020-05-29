@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using Best_Restaurants.Models;
+using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
+
 namespace HairSalon.Controllers
 {
   public class ClientsControllers : Controller
   {
-    private readonly HairSalonContext db;
-    public ClientsControllers()
+    private readonly HairSalonContext _db;
+    public ClientsControllers(HairSalonContext db)
     {
       _db = db;
     }
@@ -20,7 +21,9 @@ namespace HairSalon.Controllers
       return View("Create");
     }
 
-    public ActionResult Create()
+
+    [HttpPost]
+    public ActionResult Create(Client client)
     {
       return RedirectToAction("Index", "Stylists");
     }
