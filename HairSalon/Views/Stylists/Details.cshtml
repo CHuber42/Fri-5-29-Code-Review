@@ -8,9 +8,9 @@
 
 <h1>@Model.Name's Clients</h1>
 
- 
+<h4>Click a name to remove it from the Clients List</h4>
 @foreach (Client client in @Model.Clients)
 {
-  @client.Name<br>
+  @Html.ActionLink($"{client.Name}", "Delete", "Clients", new { id = client.ClientId })<br>
 }
 
