@@ -27,7 +27,12 @@ namespace HairSalon.Controllers
     [HttpPost] 
     public ActionResult Create(Stylist stylist)
     {
-      
+      return RedirectToAction("Index", "Stylists");
+    }
+
+    public ActionResult Details(int id)
+    {
+      return View("Details", model);
     }
 
   }
