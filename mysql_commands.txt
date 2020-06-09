@@ -1,6 +1,6 @@
-CREATE SCHEMA `christopher_huber` ;
+CREATE DATABASE `christopher_huber` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-
+USE `christopher_huber`;
 
 CREATE TABLE `christopher_huber`.`Stylists` (
   `StylistId` INT NOT NULL AUTO_INCREMENT,
